@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-{% extends 'rango/base.html' %}
+{% extends 'rango/base.html' %}
+
 {% load staticfiles %}
 
 {% block title_block %}
@@ -10,6 +11,8 @@
     <div>
     <h1>About Page</h1>
     This tutorial has been put together by Julia <br />
+
+    Number of visits: {{ visits }}
 
     </div>
     <div>
