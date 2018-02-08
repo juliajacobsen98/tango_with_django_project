@@ -10,12 +10,18 @@
 {% block body_block %}
     <div>
     <h1>About Page</h1>
-    This tutorial has been put together by Julia <br />
+    <hr>
+    rango says here is the about page
+    <br>
+    This tutorial has been put together by Julia
+    <br>
+    <hr>
+
 
     Number of visits: {{ visits }}
-
     </div>
+    
     <div>
-	<img src = "{{ MEDIA_URL}}cat.jpg" alt="Picture of Rango" />
+	<img src = "{{ MEDIA_URL}}cat.jpg" />
     </div>
 {% endblock%}
