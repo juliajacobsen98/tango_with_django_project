@@ -4,16 +4,20 @@
 {% load staticfiles %}
 
 {% block title_block %}
-    Index
+    Rango
 {% endblock %}
 
 {% block body_block %}
+
 <div>
     {% if user.is_authenticated %}
-        <h1>Rango says... howdy {{ user.username }}!</h1>
+        <h1>Rango says...</h1>
+        howdy {{ user.username }}!<br />
     {% else %}
-        <h1>Rango says... hey there partner!</h1>
+        <h1>Rango says...</h1>
+        hey there partner!<br />
     {% endif %}
+        Number of visits: {{ visits }}
 </div>
     
     <h2>Most Liked Categories</h2>
@@ -21,7 +25,7 @@
     {% if categories %}
     <ul>
         {% for category in categories %}
-            <li><a href="/rango/category/{{ category.slug }}">{{ category.name }}</a></li>
+            <li><a href="{% url 'show_category' category.slug %}">{{ category.name }}</a></li>
         {% endfor %}
     </ul>
     {% else %}
