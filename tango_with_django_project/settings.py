@@ -60,7 +60,7 @@ ROOT_URLCONF = 'tango_with_django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR, ],
+        'DIRS': [TEMPLATE_DIR,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,8 +73,6 @@ TEMPLATES = [
         },
     },
 ]
-
-STATICFILES_DIRS = [STATIC_DIR, ]
 
 WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 
@@ -135,6 +133,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [STATIC_DIR, ]
+
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+
 LOGIN_URL = '/rango/login/'
